@@ -19,95 +19,184 @@
       <li><a href="profile.html" class="active">Profile</a></li>
     </ul>
   </nav>
+ <div class="container">
+        <!-- Profile Header with Photo -->
+        <div class="profile-header">
+            <div class="profile-photo-section">
+                <div class="photo-placeholder">
+                    <span class="photo-icon">📷</span>
+                </div>
+                <div class="photo-text">Upload profile photo</div>
+            </div>
+        </div>
 
-  <!-- Section Dropdown -->
-  <form id="profile-form">
-    <h1>My Profile</h1>
+        <!-- Personal Information Form -->
+        <div class="form-section">
+            <h2 class="section-title">Personal Information</h2>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="firstName" class="required">First name</label>
+                    <input type="text" id="firstName" value="Batseba" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label for="lastName" class="required">Last name</label>
+                    <input type="text" id="lastName" value="Leshilo" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label for="gender" class="required">Gender</label>
+                    <select id="gender">
+                        <option value="female" selected>Female</option>
+                        <option value="male">Male</option>
+                        <option value="other">Other</option>
+                        <option value="prefer-not-to-say">Prefer not to say</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="jobTitle">Current job title</label>
+                    <input type="text" id="jobTitle" value="Not working">
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" value="leshilobatseba1@gmail.com">
+                    <div class="email-change">
+                        <a href="#" class="change-email-link">Change my email address</a>
+                    </div>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="street">Street name and number</label>
+                    <input type="text" id="street" value="12067 Sebetsa Street">
+                </div>
+                
+                <div class="form-group">
+                    <label for="postcode">Postcode</label>
+                    <input type="text" id="postcode" value="1685">
+                </div>
+                
+                <div class="form-group">
+                    <label for="city" class="required">City</label>
+                    <input type="text" id="city" value="Johannesburg">
+                </div>
+                
+                <div class="form-group">
+                    <label for="country">Country of residence</label>
+                    <input type="text" id="country" value="South Africa" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone" class="required">Phone number</label>
+                    <input type="tel" id="phone" value="+27 731583150">
+                </div>
+                
+                <div class="form-group">
+                    <label for="dob" class="required">Date of Birth</label>
+                    <input type="text" id="dob" value="06.02.2005">
+                </div>
+            </div>
+        </div>
 
-    <label for="section-select">Go to Section:</label>
-    <select id="section-select" onchange="location = this.value;">
-      <option value="#personal-info">Personal Info</option>
-      <option value="#experience">Experience</option>
-      <option value="#education">Education</option>
-      <option value="#skills">Skills</option>
-    </select>
+        <!-- Background Information -->
+        <div class="form-section">
+            <h2 class="section-title">Background Information</h2>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="disability" class="required">Do you have a disability?</label>
+                    <select id="disability">
+                        <option value="no" selected>No</option>
+                        <option value="yes">Yes</option>
+                        <option value="prefer-not-to-say">Prefer not to say</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="ethnicity" class="required">Ethnicity</label>
+                    <select id="ethnicity">
+                        <option value="african" selected>African</option>
+                        <option value="asian">Asian</option>
+                        <option value="caucasian">Caucasian</option>
+                        <option value="mixed">Mixed</option>
+                        <option value="other">Other</option>
+                        <option value="prefer-not-to-say">Prefer not to say</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="citizenship" class="required">Citizenship</label>
+                    <select id="citizenship">
+                        <option value="south-african" selected>South African Citizen</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="idNumber" class="required">South African legal ID</label>
+                    <input type="text" id="idNumber" value="0502060120081">
+                </div>
+            </div>
+            <div class="mandatory-note">* Mandatory fields</div>
+        </div>
 
-    <!-- Personal Info -->
-    <fieldset id="personal-info">
-      <legend>Personal Info</legend>
-      <input type="text" name="fullname" placeholder="Full Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <input type="tel" name="phone" placeholder="Phone Number">
-      <input type="text" name="location" placeholder="City / Location">
-      <input type="text" name="linkedin" placeholder="LinkedIn Profile URL">
-      <input type="file" name="profilepic" accept="image/*">
-      <textarea name="bio" rows="4" placeholder="Short Bio / About Me"></textarea>
-    </fieldset>
+        <!-- Profile Visibility -->
+        <div class="visibility-section">
+            <h2 class="section-title">Let recruiters find you</h2>
+            
+            <div class="visibility-option selected" id="open-to-offers">
+                <div class="option-header">
+                    <div class="option-title">Open to offers</div>
+                    <div class="recommended-badge">Recommended</div>
+                </div>
+                <div class="option-description">
+                    Recruiters and hiring managers will be able to contact you for jobs that aren't advertised yet. 
+                    Your profile and CV is not visible to other candidates.
+                </div>
+            </div>
+            
+            <div class="visibility-option" id="hide-profile">
+                <div class="option-header">
+                    <div class="option-title">Hide profile</div>
+                </div>
+                <div class="option-description">
+                    Your profile is not visible to recruiters or hiring managers. They won't be able to reach out to you for jobs that aren't advertised.
+                </div>
+            </div>
+        </div>
 
-    <!-- Experience -->
-    <fieldset id="experience">
-      <legend>Work Experience</legend>
-      <input type="text" name="job_title_1" placeholder="Job Title">
-      <input type="text" name="company_1" placeholder="Company Name">
-      <select name="years_1">
-        <option value="">Years</option>
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-      <!-- Add more static entries if needed -->
-    </fieldset>
+        <!-- Profile Enhancement -->
+        <div class="profile-enhancement">
+            <h2 class="section-title">Update your profile with just one click!</h2>
+            <p class="enhancement-subtitle">
+                Upload your CV to update your most recent work experience and personal details to your profile.
+            </p>
+            
+            <div class="cv-upload-section">
+                <div class="upload-title">1. Drag & drop your CV</div>
+                <div class="upload-instructions">
+                    .pdf, .doc, .docx, .odt, .jpg, .jpeg, .png, .xls, .xlsx, .ods, .txt, .rtf. Min 0B, max 4MB
+                </div>
+                <button class="upload-button">2. Upload CV</button>
+            </div>
+            
+            <div class="profile-completion">
+                <h3 class="completion-title">Complete your profile</h3>
+                <div class="enhancement-links">
+                    <a href="#" class="enhancement-link">What I'm looking for</a>
+                    <a href="#" class="enhancement-link">What I bring to the job</a>
+                    <a href="#" class="enhancement-link">My documents</a>
+                </div>
+            </div>
+        </div>
 
-    <!-- Education -->
-    <fieldset id="education">
-      <legend>Education</legend>
-      <select name="degree_1">
-        <option value="">Degree / Certification</option>
-        <option value="High School">High School</option>
-        <option value="Diploma">Diploma</option>
-        <option value="Bachelor">Bachelor</option>
-        <option value="Master">Master</option>
-        <option value="PhD">PhD</option>
-      </select>
-      <!-- Industry / Field -->
-<label for="industry">Field / Industry</label>
-<select name="industry" id="industry" required>
-    <option value="">Select your field</option>
-    <option value="Software Development">Software Development</option>
-    <option value="Web Development">Web Development</option>
-    <option value="UI/UX Design">UI/UX Design</option>
-    <option value="Marketing">Marketing</option>
-    <option value="Finance">Finance</option>
-    <option value="Human Resources">Human Resources</option>
-    <option value="Education">Education</option>
-    <option value="Healthcare">Healthcare</option>
-    <option value="Engineering">Engineering</option>
-    <option value="Other">Other</option>
-</select>
+        <!-- Form Actions -->
+        <div class="form-actions">
+            <button class="btn btn-cancel">Cancel</button>
+            <button class="btn btn-save">Save</button>
+        </div>
+    </div>
 
-      <input type="text" name="institution_1" placeholder="School / Institution">
-      <select name="year_1">
-        <option value="">Year</option>
-        <option value="2025">2025</option>
-        <option value="2024">2024</option>
-        <option value="2023">2023</option>
-      </select>
-      <!-- Add more static entries if needed -->
-    </fieldset>
-
-    <!-- Skills -->
-    <fieldset id="skills">
-      <legend>Skills</legend>
-      <input type="text" name="skill_1" placeholder="Skill">
-      <input type="text" name="skill_2" placeholder="Skill">
-      <input type="text" name="skill_3" placeholder="Skill">
-    </fieldset>
-
-    <button type="submit">Save Profile</button>
-  </form>
-
+    <script src="script.js"></script>
 </body>
 </html>
