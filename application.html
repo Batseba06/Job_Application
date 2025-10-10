@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>batseba.job</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <nav class="navbar">
+    <div class="logo">batseba.job</div>
+    <ul class="nav-links">
+  <li><a href="index.html">Home</a></li>
+      <li><a href="signup.html">Register</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="application.html" class="active">Apply</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>  
+   </nav>
+     <form id="application">
+    <h1>Job Application</h1>
+    <h4>Please fill in your details to apply for the position</h4>
+
+    <input type="text" name="fullname" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <input type="text" name="position" placeholder="Position Applying For" required>
+    <input type="file" name="resume" required>
+    <textarea name="coverletter" rows="5" placeholder="Cover Letter" required></textarea>
+
+    <div class="options">
+      <label><input type="checkbox" required> I confirm that all information is correct</label>
+    </div>
+
+    <button type="submit">Submit Application</button>
+     </form>
+</body>
+</html>
